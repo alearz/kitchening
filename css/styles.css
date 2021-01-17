@@ -1,0 +1,195 @@
+/* GENERALES */
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+a, a:hover{
+    text-decoration: none;/* define si el texto está decorado con un subrayado, un subrayado y/o un tachado. Es una abreviatura de las propiedades. El none, hace que le saque la decoracion */
+}
+li{
+    list-style: none; /* No se utiliza ningún estilo de lista. */
+}
+body{
+    background-image: url('../images/bg-body.png');
+}
+/* HEADER */
+header.main-header{
+    display: flex; /* El elemento se comporta como un elemento de bloque y presenta su contenido según el modelo flexbox. */
+    flex-direction: column; /* se forma una columna uno debajo del otro */
+    align-items: center; /* centra la columna */
+    margin: 20px 0;
+}
+img.logo{
+    border-radius: 50%; /* redondea las esquinas del borde exterior de un elemento. Puede establecer un solo radio para crear esquinas circulares o dos radios para hacer esquinas elípticas. */
+    border: 1px solid gray; /* le da color al borde del circulo */
+    margin: 15px /* arriba */ 0 /* derecha */ 30px /* abajo */ 0; /* izquierda */
+    width: 180px;
+}
+nav.main-nav{
+    width: 100%;
+    text-align: center; /* centra el texto */
+}
+
+nav.main-nav li:last-child{ /* borra lo ultima linea de la columna */
+    border-bottom: none; /* establece el bordeinferior de un elemento */
+}
+nav.main-nav li{
+    border-bottom: 1px solid white;
+    padding: 10px 0;
+    background-color: #444444;
+}
+nav.main-nav a{
+    color: white;
+    text-transform: uppercase; /* especifica cómo poner en mayúsculas el texto de un elemento. Se puede utilizar para hacer que el texto aparezca en mayúsculas o minúsculas, o con cada palabra en mayúsculas. También puede ayudar a mejorar la legibilidad del rubí.
+
+    */
+}
+/* BANNER */
+section.banner img{
+    display: none; /* no se muestra la imagen */
+    width: 100%; /* Ancho del texto */
+}
+/* PRODUCTO */
+section.vip-products{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap; /* respeta el ancho de tus hijos */
+    margin: 30px 0;
+}
+article.product{
+    width: 100%;
+}
+article.product h2{
+    font-weight: 700;
+    margin: 20px 0;
+}
+article.product p{
+    color: gray;
+}
+article.product a.more{
+    background-color: gray;
+    color: white;
+    padding: 10px;
+    display: inline-block;
+    margin: 20px 0;
+    font-weight: 700;
+}
+div.photo-container img.photo{
+    width: 100%;
+}
+div.photo-container{
+    position: relative;
+}
+div.photo-container img.special{
+    position: absolute;
+    top:0;
+    right: 3%;
+    width: 15%;
+}
+div.photo-container a.zoom{
+      position: absolute;
+      top: 45%;
+      text-align: center;
+      color: white;
+      text-transform: uppercase;
+      background-color: rgba(1, 1,1, 0.5);
+      display: block; /* me permite darle el ancho ala a */
+      width: 100%;
+      font-weight: 700;
+      padding: 10px;
+
+}
+/* FOOTER */
+footer.main-footer{
+    background-color: gray;
+    width: 100%;
+    text-align: center;
+}
+footer.main-footer li{ 
+    border-bottom: 1px solid white;
+    padding: 10px 0;
+}
+footer.main-footer li:last-child{
+    border-bottom: 1px solid white;
+    padding: 10px 0;
+    /* borra lo ultima linea de la columna */
+    border-bottom: none; /* establece el bordeinferior de un elemento */
+}
+footer.main-footer a{
+    color: white;
+   /*  font-size: 2em; */ /* establece el tamaño de la fuente. Al cambiar el tamaño de fuente también se actualizan los tamaños de las unidades relativas al tamaño de fuente <length>, como em, ex, etc. */
+    text-transform: uppercase; 
+}
+
+@media(min-width: 768px)
+{
+    nav.main-nav{
+        background-color: none;
+        
+    }
+    nav.main-nav ul{
+        display: flex;
+        justify-content: space-between;
+        margin: 0;
+    }
+    /* BANNER */
+    section.banner img{
+        display: block;
+    }
+    section.vip-products{
+        flex-direction: row;
+        justify-content: space-between;
+       
+    }
+    nav.main-nav li{
+        border-bottom: none;
+        padding: 5px;
+        width: 115px;
+    }
+    article.product{
+        width: 49%;
+    }
+}
+@media(min-width: 1024px){
+    div.photo-container img.photo {
+        width: 100%;
+    }
+    /* PRODUCT */
+    article.product{
+        width: 30%;
+    }
+    /* FOOTER */
+    footer.main-footer {
+        height: 200px;
+        background-color: #ff0000d5;
+        border-radius: 20px 20px 0 0;
+    }
+    footer.main-footer li{ 
+        border-bottom: none;
+        padding: 10px 0;
+        display: inline;
+        border-right: 1px solid white;
+        padding: 0 15px;
+    }
+    footer.main-footer li:last-child{
+        border-right: none;
+        padding: 0 5px;
+    }
+    footer.main-footer ul{
+       padding-top: 75px;
+
+    }
+    
+    footer.main-footer  a{
+        color: white;
+       /*  font-size: 2em; */ /* establece el tamaño de la fuente. Al cambiar el tamaño de fuente también se actualizan los tamaños de las unidades relativas al tamaño de fuente <length>, como em, ex, etc. */
+        text-transform: capitalize; 
+        font-weight: bold;
+        
+    }
+    
+
+}
+
